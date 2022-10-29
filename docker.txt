@@ -1,0 +1,4 @@
+#gerar o build (imagem)
+build -t nome do programa deve estar dentro do diretorio
+#|rodar imagem 
+docker run -t f2140326658a - ID da imagem
