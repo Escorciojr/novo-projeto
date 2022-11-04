@@ -3,16 +3,18 @@ import time
 import random
 import sys
 
-from sqlalchemy import true
-
 e = 1
 os.system('clear')
 while True:
     try:
-        jogos = int(input("quantos jogos quer fazer"))
+        jogos = int(input("quantos jogos quer fazer=>"))
         break
     except:
-        print("apenas numeros")
+        print('\a')
+        print("!!!apenas numeros por favor !!")
+        print()
+        time.sleep(1)
+        os.system('clear')
 
 for e in range(e+jogos-1):
     print()
