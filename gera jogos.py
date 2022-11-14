@@ -3,11 +3,13 @@ import time
 import random
 import sys
 
+listas = []
 e = 1
 os.system('clear')
 while True:
     try:
-        jogos = int(input("quantos jogos quer fazer=>"))
+        concurso = int(input("nr dop concurso=> "))
+        jogos = int(input("quantos jogos quer fazer=> "))
         break
     except:
         print('\a')
@@ -18,14 +20,23 @@ while True:
 
 for e in range(e+jogos-1):
     print()
+
     print("jogo" + str(e+1))
+    jogo = ("jogo" + str(e+1))
+    listas.append(jogo)
     for i in range(6):
         r = random.randint(1, 60)
         time.sleep(0.01)
         sys.stdout.write(str(r))
+        listas.append(r)
         valor = i
         if valor != 5:
             sys.stdout.write("-")
         else:
             print()
-            print("fim de jogatina")
+            print("##")
+            listas.append("##")
+
+print(listas)
+w = open("concurso nr"+str(concurso)+".txt", "w")
+w.write(str(listas))
